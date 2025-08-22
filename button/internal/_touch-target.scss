@@ -1,0 +1,23 @@
+//
+// Copyright 2021 Google LLC
+// SPDX-License-Identifier: Apache-2.0
+//
+
+@mixin styles() {
+    .touch {
+        position: absolute;
+        top: 50%;
+        height: calc(48rem * var(--md-sys-globalscale, 1));
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    :host([touch-target='wrapper']) {
+        margin: max(calc(0rem * var(--md-sys-globalscale, 1)), (calc(48rem * var(--md-sys-globalscale, 1)) - var(--_container-height)) / 2) 0;
+    }
+
+    :host([touch-target='none']) .touch {
+        display: none;
+    }
+}
