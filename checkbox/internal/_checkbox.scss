@@ -17,11 +17,11 @@
 $_md-sys-motion: tokens.md-sys-motion-values();
 // The stroke width of the icon marks.
 $_mark-stroke: calc(2 * var(--md-sys-globalscale, 1px));
-// The coordinates in an calc(18rem * var(--md-sys-globalscale,1)) viewBox of the bottom left corner of the
+// The coordinates in an calc(18* var(--md-sys-globalscale,1px)) viewBox of the bottom left corner of the
 // indeterminate icon. Y is negative to fix an issue in Safari (see below).
 $_indeterminate-bottom-left: calc(4 * var(--md-sys-globalscale, 1px)),
   -calc(10 * var(--md-sys-globalscale, 1px));
-// The coordinates in an calc(18rem * var(--md-sys-globalscale,1)) viewBox of the bottom left corner of the
+// The coordinates in an calc(18* var(--md-sys-globalscale,1px)) viewBox of the bottom left corner of the
 // checkmark icon. Y is negative to fix an issue in Safari (see below).
 $_checkmark-bottom-left: calc(7 * var(--md-sys-globalscale, 1px)),
   -calc(14 * var(--md-sys-globalscale, 1px));

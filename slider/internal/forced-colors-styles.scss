@@ -60,7 +60,7 @@
     // * The fill is set directly. Using currentColor does not seem to work,
     //   hence the duplication of background-image.
     // * This approach does not respect tick sizes. Instead they will always be
-    //   calc(1rem * var(--md-sys-globalscale,1)) wide. This is a limitation of using the url, as I'm not sure how
+    //   calc(1* var(--md-sys-globalscale,1px)) wide. This is a limitation of using the url, as I'm not sure how
     //   to pass in a custom property to change the `r` attribute.
     // TODO(b/298051946): Tick marks cannot be resized in HCM
     // stylelint-disable function-url-quotes -- SVG data URI

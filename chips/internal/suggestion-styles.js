@@ -4,7 +4,190 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 // Generated stylesheet for ./chips/internal/suggestion-styles.css.
-import { css } from 'lit';
-export const styles = css `:host{--_container-height: var(--md-suggestion-chip-container-height, calc(32rem * var(--md-sys-globalscale,1)));--_disabled-label-text-color: var(--md-suggestion-chip-disabled-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-label-text-opacity: var(--md-suggestion-chip-disabled-label-text-opacity, 0.38);--_elevated-container-color: var(--md-suggestion-chip-elevated-container-color, var(--md-sys-color-surface-container-low, #f7f2fa));--_elevated-container-elevation: var(--md-suggestion-chip-elevated-container-elevation, 1);--_elevated-container-shadow-color: var(--md-suggestion-chip-elevated-container-shadow-color, var(--md-sys-color-shadow, #000));--_elevated-disabled-container-color: var(--md-suggestion-chip-elevated-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_elevated-disabled-container-elevation: var(--md-suggestion-chip-elevated-disabled-container-elevation, 0);--_elevated-disabled-container-opacity: var(--md-suggestion-chip-elevated-disabled-container-opacity, 0.12);--_elevated-focus-container-elevation: var(--md-suggestion-chip-elevated-focus-container-elevation, 1);--_elevated-hover-container-elevation: var(--md-suggestion-chip-elevated-hover-container-elevation, 2);--_elevated-pressed-container-elevation: var(--md-suggestion-chip-elevated-pressed-container-elevation, 1);--_focus-label-text-color: var(--md-suggestion-chip-focus-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-label-text-color: var(--md-suggestion-chip-hover-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-color: var(--md-suggestion-chip-hover-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-opacity: var(--md-suggestion-chip-hover-state-layer-opacity, 0.08);--_label-text-color: var(--md-suggestion-chip-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_label-text-font: var(--md-suggestion-chip-label-text-font, var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-suggestion-chip-label-text-line-height, var(--md-sys-typescale-label-large-line-height, calc(calc(1.25rem * var(--md-sys-globalscale,1)) * 16)));--_label-text-size: var(--md-suggestion-chip-label-text-size, var(--md-sys-typescale-label-large-size, calc(calc(0.875rem * var(--md-sys-globalscale,1)) * 16)));--_label-text-weight: var(--md-suggestion-chip-label-text-weight, var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500)));--_pressed-label-text-color: var(--md-suggestion-chip-pressed-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-state-layer-color: var(--md-suggestion-chip-pressed-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-state-layer-opacity: var(--md-suggestion-chip-pressed-state-layer-opacity, 0.12);--_disabled-outline-color: var(--md-suggestion-chip-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-opacity: var(--md-suggestion-chip-disabled-outline-opacity, 0.12);--_focus-outline-color: var(--md-suggestion-chip-focus-outline-color, var(--md-sys-color-on-surface-variant, #49454f));--_outline-color: var(--md-suggestion-chip-outline-color, var(--md-sys-color-outline, #79747e));--_outline-width: var(--md-suggestion-chip-outline-width, calc(1rem * var(--md-sys-globalscale,1)));--_disabled-leading-icon-color: var(--md-suggestion-chip-disabled-leading-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-leading-icon-opacity: var(--md-suggestion-chip-disabled-leading-icon-opacity, 0.38);--_focus-leading-icon-color: var(--md-suggestion-chip-focus-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_hover-leading-icon-color: var(--md-suggestion-chip-hover-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_leading-icon-color: var(--md-suggestion-chip-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_pressed-leading-icon-color: var(--md-suggestion-chip-pressed-leading-icon-color, var(--md-sys-color-primary, #6750a4));--_icon-size: var(--md-suggestion-chip-icon-size, calc(18rem * var(--md-sys-globalscale,1)));--_container-shape-start-start: var(--md-suggestion-chip-container-shape-start-start, var(--md-suggestion-chip-container-shape, var(--md-sys-shape-corner-small, calc(8rem * var(--md-sys-globalscale,1)))));--_container-shape-start-end: var(--md-suggestion-chip-container-shape-start-end, var(--md-suggestion-chip-container-shape, var(--md-sys-shape-corner-small, calc(8rem * var(--md-sys-globalscale,1)))));--_container-shape-end-end: var(--md-suggestion-chip-container-shape-end-end, var(--md-suggestion-chip-container-shape, var(--md-sys-shape-corner-small, calc(8rem * var(--md-sys-globalscale,1)))));--_container-shape-end-start: var(--md-suggestion-chip-container-shape-end-start, var(--md-suggestion-chip-container-shape, var(--md-sys-shape-corner-small, calc(8rem * var(--md-sys-globalscale,1)))));--_leading-space: var(--md-suggestion-chip-leading-space, calc(16rem * var(--md-sys-globalscale,1)));--_trailing-space: var(--md-suggestion-chip-trailing-space, calc(16rem * var(--md-sys-globalscale,1)));--_icon-label-space: var(--md-suggestion-chip-icon-label-space, calc(8rem * var(--md-sys-globalscale,1)));--_with-leading-icon-leading-space: var(--md-suggestion-chip-with-leading-icon-leading-space, calc(8rem * var(--md-sys-globalscale,1)))}@media(forced-colors: active){.link .outline{border-color:ActiveText}}
-`;
+import { css } from 'lit'
+export const styles = css`
+  :host {
+    --_container-height: var(
+      --md-suggestion-chip-container-height,
+      calc(32 * var(--md-sys-globalscale, 1px))
+    );
+    --_disabled-label-text-color: var(
+      --md-suggestion-chip-disabled-label-text-color,
+      var(--md-sys-color-on-surface, #1d1b20)
+    );
+    --_disabled-label-text-opacity: var(--md-suggestion-chip-disabled-label-text-opacity, 0.38);
+    --_elevated-container-color: var(
+      --md-suggestion-chip-elevated-container-color,
+      var(--md-sys-color-surface-container-low, #f7f2fa)
+    );
+    --_elevated-container-elevation: var(--md-suggestion-chip-elevated-container-elevation, 1);
+    --_elevated-container-shadow-color: var(
+      --md-suggestion-chip-elevated-container-shadow-color,
+      var(--md-sys-color-shadow, #000)
+    );
+    --_elevated-disabled-container-color: var(
+      --md-suggestion-chip-elevated-disabled-container-color,
+      var(--md-sys-color-on-surface, #1d1b20)
+    );
+    --_elevated-disabled-container-elevation: var(
+      --md-suggestion-chip-elevated-disabled-container-elevation,
+      0
+    );
+    --_elevated-disabled-container-opacity: var(
+      --md-suggestion-chip-elevated-disabled-container-opacity,
+      0.12
+    );
+    --_elevated-focus-container-elevation: var(
+      --md-suggestion-chip-elevated-focus-container-elevation,
+      1
+    );
+    --_elevated-hover-container-elevation: var(
+      --md-suggestion-chip-elevated-hover-container-elevation,
+      2
+    );
+    --_elevated-pressed-container-elevation: var(
+      --md-suggestion-chip-elevated-pressed-container-elevation,
+      1
+    );
+    --_focus-label-text-color: var(
+      --md-suggestion-chip-focus-label-text-color,
+      var(--md-sys-color-on-surface-variant, #49454f)
+    );
+    --_hover-label-text-color: var(
+      --md-suggestion-chip-hover-label-text-color,
+      var(--md-sys-color-on-surface-variant, #49454f)
+    );
+    --_hover-state-layer-color: var(
+      --md-suggestion-chip-hover-state-layer-color,
+      var(--md-sys-color-on-surface-variant, #49454f)
+    );
+    --_hover-state-layer-opacity: var(--md-suggestion-chip-hover-state-layer-opacity, 0.08);
+    --_label-text-color: var(
+      --md-suggestion-chip-label-text-color,
+      var(--md-sys-color-on-surface-variant, #49454f)
+    );
+    --_label-text-font: var(
+      --md-suggestion-chip-label-text-font,
+      var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, Roboto))
+    );
+    --_label-text-line-height: var(
+      --md-suggestion-chip-label-text-line-height,
+      var(
+        --md-sys-typescale-label-large-line-height,
+        calc(calc(1.25 * var(--md-sys-globalscale, 1px)) * 16)
+      )
+    );
+    --_label-text-size: var(
+      --md-suggestion-chip-label-text-size,
+      var(
+        --md-sys-typescale-label-large-size,
+        calc(calc(0.875 * var(--md-sys-globalscale, 1px)) * 16)
+      )
+    );
+    --_label-text-weight: var(
+      --md-suggestion-chip-label-text-weight,
+      var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500))
+    );
+    --_pressed-label-text-color: var(
+      --md-suggestion-chip-pressed-label-text-color,
+      var(--md-sys-color-on-surface-variant, #49454f)
+    );
+    --_pressed-state-layer-color: var(
+      --md-suggestion-chip-pressed-state-layer-color,
+      var(--md-sys-color-on-surface-variant, #49454f)
+    );
+    --_pressed-state-layer-opacity: var(--md-suggestion-chip-pressed-state-layer-opacity, 0.12);
+    --_disabled-outline-color: var(
+      --md-suggestion-chip-disabled-outline-color,
+      var(--md-sys-color-on-surface, #1d1b20)
+    );
+    --_disabled-outline-opacity: var(--md-suggestion-chip-disabled-outline-opacity, 0.12);
+    --_focus-outline-color: var(
+      --md-suggestion-chip-focus-outline-color,
+      var(--md-sys-color-on-surface-variant, #49454f)
+    );
+    --_outline-color: var(
+      --md-suggestion-chip-outline-color,
+      var(--md-sys-color-outline, #79747e)
+    );
+    --_outline-width: var(
+      --md-suggestion-chip-outline-width,
+      calc(1 * var(--md-sys-globalscale, 1px))
+    );
+    --_disabled-leading-icon-color: var(
+      --md-suggestion-chip-disabled-leading-icon-color,
+      var(--md-sys-color-on-surface, #1d1b20)
+    );
+    --_disabled-leading-icon-opacity: var(
+      --md-suggestion-chip-disabled-leading-icon-opacity,
+      0.38
+    );
+    --_focus-leading-icon-color: var(
+      --md-suggestion-chip-focus-leading-icon-color,
+      var(--md-sys-color-primary, #6750a4)
+    );
+    --_hover-leading-icon-color: var(
+      --md-suggestion-chip-hover-leading-icon-color,
+      var(--md-sys-color-primary, #6750a4)
+    );
+    --_leading-icon-color: var(
+      --md-suggestion-chip-leading-icon-color,
+      var(--md-sys-color-primary, #6750a4)
+    );
+    --_pressed-leading-icon-color: var(
+      --md-suggestion-chip-pressed-leading-icon-color,
+      var(--md-sys-color-primary, #6750a4)
+    );
+    --_icon-size: var(--md-suggestion-chip-icon-size, calc(18 * var(--md-sys-globalscale, 1px)));
+    --_container-shape-start-start: var(
+      --md-suggestion-chip-container-shape-start-start,
+      var(
+        --md-suggestion-chip-container-shape,
+        var(--md-sys-shape-corner-small, calc(8 * var(--md-sys-globalscale, 1px)))
+      )
+    );
+    --_container-shape-start-end: var(
+      --md-suggestion-chip-container-shape-start-end,
+      var(
+        --md-suggestion-chip-container-shape,
+        var(--md-sys-shape-corner-small, calc(8 * var(--md-sys-globalscale, 1px)))
+      )
+    );
+    --_container-shape-end-end: var(
+      --md-suggestion-chip-container-shape-end-end,
+      var(
+        --md-suggestion-chip-container-shape,
+        var(--md-sys-shape-corner-small, calc(8 * var(--md-sys-globalscale, 1px)))
+      )
+    );
+    --_container-shape-end-start: var(
+      --md-suggestion-chip-container-shape-end-start,
+      var(
+        --md-suggestion-chip-container-shape,
+        var(--md-sys-shape-corner-small, calc(8 * var(--md-sys-globalscale, 1px)))
+      )
+    );
+    --_leading-space: var(
+      --md-suggestion-chip-leading-space,
+      calc(16 * var(--md-sys-globalscale, 1px))
+    );
+    --_trailing-space: var(
+      --md-suggestion-chip-trailing-space,
+      calc(16 * var(--md-sys-globalscale, 1px))
+    );
+    --_icon-label-space: var(
+      --md-suggestion-chip-icon-label-space,
+      calc(8 * var(--md-sys-globalscale, 1px))
+    );
+    --_with-leading-icon-leading-space: var(
+      --md-suggestion-chip-with-leading-icon-leading-space,
+      calc(8 * var(--md-sys-globalscale, 1px))
+    );
+  }
+  @media (forced-colors: active) {
+    .link .outline {
+      border-color: ActiveText;
+    }
+  }
+`
 //# sourceMappingURL=suggestion-styles.js.map

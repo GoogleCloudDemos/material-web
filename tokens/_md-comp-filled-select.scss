@@ -147,7 +147,7 @@ $_default: (
   // Values pulled from b/198759625 spreadsheet
   @return (
     // go/keep-sorted start
-    // TODO(b/259455114): remove when focus tokens update to calc(3rem * var(--md-sys-globalscale,1))
+    // TODO(b/259455114): remove when focus tokens update to calc(3* var(--md-sys-globalscale,1px))
     'text-field-focus-active-indicator-height':
       if($exclude-hardcoded-values, null, calc(3 * var(--md-sys-globalscale, 1px))),
     // go/keep-sorted end

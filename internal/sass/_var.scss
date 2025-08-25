@@ -18,19 +18,19 @@
 /// @param {*} $fallback [null] - Optional `var()` fallback value.
 /// @return {String} A custom property `var()` string.
 @function create($name, $fallback: null) {
-    $name: create-name($name);
+  $name: create-name($name);
 
-    @if $fallback ==null {
-        @return var(#{$name});
-    }
+  @if $fallback ==null {
+    @return var(#{$name});
+  }
 
-    @if is-var($fallback) {
-        $fallback-name: name($fallback);
-        $fallback-fallback: fallback($fallback);
-        @return var(#{$name}, create($fallback-name, $fallback-fallback));
-    }
+  @if is-var($fallback) {
+    $fallback-name: name($fallback);
+    $fallback-fallback: fallback($fallback);
+    @return var(#{$name}, create($fallback-name, $fallback-fallback));
+  }
 
-    @return var(#{$name}, $fallback);
+  @return var(#{$name}, $fallback);
 }
 
 /// Create a custom property variable name.
@@ -52,11 +52,11 @@
 /// @param {String} $name - The name of the custom property.
 /// @return {String} The full valid CSS custom property variable name.
 @function create-name($name) {
-    @if string-ext.has-prefix($name, '--') {
-        @return $name;
-    }
+  @if string-ext.has-prefix($name, '--') {
+    @return $name;
+  }
 
-    @return string.unquote('--md-#{$name}');
+  @return string.unquote('--md-#{$name}');
 }
 
 /// Returns the custom property variable name of `var()` string.
@@ -65,30 +65,30 @@
 /// @param {String} $var - A custom property `var()` string.
 /// @return {String} The custom property variable name.
 @function name($var) {
-    $var: _parse-and-validate($var);
-    @return map.get($var, name);
+  $var: _parse-and-validate($var);
+  @return map.get($var, name);
 }
 
 /// Returns the fallback value of a custom property `var()` string. The value
 /// may be null if the `var()` does not have a fallback value.
 ///
 /// @example - scss
-///   $fallback: var.fallback(var(--foo, var(--bar, calc(8rem * var(--md-sys-globalscale,1))));
-///   // "var(--bar, calc(8rem * var(--md-sys-globalscale,1)))"
+///   $fallback: var.fallback(var(--foo, var(--bar, calc(8* var(--md-sys-globalscale,1px))));
+///   // "var(--bar, calc(8* var(--md-sys-globalscale,1px)))"
 ///
 /// @throw If the value is not a custom property.
 /// @param {String} $var - A custom property `var()` string.
 /// @return {String} The fallback value of the `var()` string. May be null if
 ///     the `var()` does not have a fallback value.
 @function fallback($var) {
-    $var: _parse-and-validate($var);
-    $fallback: map.get($var, fallback);
+  $var: _parse-and-validate($var);
+  $fallback: map.get($var, fallback);
 
-    @if is-var($fallback) {
-        @return create(name($fallback), fallback($fallback));
-    }
+  @if is-var($fallback) {
+    @return create(name($fallback), fallback($fallback));
+  }
 
-    @return $fallback;
+  @return $fallback;
 }
 
 /// Returns the deep fallback value of a custom property `var()` string. The
@@ -98,29 +98,29 @@
 /// concrete value in the chain.
 ///
 /// @example - scss
-///   $fallback: var.deep-fallback(var(--foo, var(--bar, calc(8rem * var(--md-sys-globalscale,1))));
-///   // "calc(8rem * var(--md-sys-globalscale,1))"
+///   $fallback: var.deep-fallback(var(--foo, var(--bar, calc(8* var(--md-sys-globalscale,1px))));
+///   // "calc(8* var(--md-sys-globalscale,1px))"
 ///
 /// @throw If the value is not a custom property.
 /// @param {String} $var - A custom property `var()` string.
 /// @return {String} The deep fallback value of the `var()` string. May be null
 ///     if the `var()` does not have a fallback value.
 @function deep-fallback($var) {
-    $fallback: fallback($var);
+  $fallback: fallback($var);
 
-    @if is-var($fallback) {
-        @return deep-fallback($fallback);
-    }
+  @if is-var($fallback) {
+    @return deep-fallback($fallback);
+  }
 
-    @return $fallback;
+  @return $fallback;
 }
 
 /// Creates a new custom property `var()` string and returns it with the
 /// specified new fallback value.
 ///
 /// @example - scss
-///   $new-var: set-fallback(var(--foo, var(--bar, calc(8rem * var(--md-sys-globalscale,1)))), calc(16rem * var(--md-sys-globalscale,1)));
-///   // "var(--foo, calc(16rem * var(--md-sys-globalscale,1)))"
+///   $new-var: set-fallback(var(--foo, var(--bar, calc(8* var(--md-sys-globalscale,1px)))), calc(16* var(--md-sys-globalscale,1px)));
+///   // "var(--foo, calc(16* var(--md-sys-globalscale,1px)))"
 ///
 /// @throw If the value is not a custom property.
 /// @param {String} $var - A custom property `var()` string.
@@ -129,8 +129,8 @@
 /// @return {String} A custom property `var()` string with the new fallback
 ///     value.
 @function set-fallback($var, $new-fallback) {
-    $name: name($var);
-    @return create($name, $new-fallback);
+  $name: name($var);
+  @return create($name, $new-fallback);
 }
 
 /// Creates a new custom property `var()` string and returns it with the
@@ -140,8 +140,8 @@
 /// function will set the final fallback value in the chain.
 ///
 /// @example - scss
-///   $new-var: deep-set-fallback(var(--foo, var(--bar, calc(8rem * var(--md-sys-globalscale,1)))), calc(16rem * var(--md-sys-globalscale,1)));
-///   // "var(--foo, var(--bar, calc(16rem * var(--md-sys-globalscale,1))))"
+///   $new-var: deep-set-fallback(var(--foo, var(--bar, calc(8* var(--md-sys-globalscale,1px)))), calc(16* var(--md-sys-globalscale,1px)));
+///   // "var(--foo, var(--bar, calc(16* var(--md-sys-globalscale,1px))))"
 ///
 /// @throw If the value is not a custom property.
 /// @param {String} $var - A custom property `var()` string.
@@ -150,13 +150,13 @@
 /// @return {String} A custom property `var()` string with the new deep
 ///     fallback value.
 @function deep-set-fallback($var, $new-fallback) {
-    $old-fallback: fallback($var);
+  $old-fallback: fallback($var);
 
-    @if is-var($old-fallback) {
-        $new-fallback: deep-set-fallback($old-fallback, $new-fallback);
-    }
+  @if is-var($old-fallback) {
+    $new-fallback: deep-set-fallback($old-fallback, $new-fallback);
+  }
 
-    @return set-fallback($var, $new-fallback);
+  @return set-fallback($var, $new-fallback);
 }
 
 /// Indicates whether or not a value is a custom property `var()` string.
@@ -168,7 +168,7 @@
 /// @return {Bool} True if the value is a custom property `var()` string, or
 ///     false if not.
 @function is-var($var) {
-    @return _parse($var) !=null;
+  @return _parse($var) !=null;
 }
 
 /// Indicates whether or not a value is a `var()` string.
@@ -177,7 +177,7 @@
 /// @return {Bool} True if the value is a custom property `var()` string, or
 ///     false if not.
 @function _is-var-string($var) {
-    @return meta.type-of($var)=='string' and string-ext.has-prefix($var, 'var(');
+  @return meta.type-of($var) == 'string' and string-ext.has-prefix($var, 'var(');
 }
 
 /// Parses a `var()` string into a Map with `name` and `fallback` keys. This
@@ -188,40 +188,40 @@
 ///     name and a `fallback` key with the fallback value (which may be null).
 ///     The returned Map itself may be null if the provided value is not valid.
 @function _parse($var) {
-    @if meta.type-of($var)=='map' and map.has-key($var, name) and map.has-key($var, fallback) {
-        @return $var;
-    }
+  @if meta.type-of($var) == 'map' and map.has-key($var, name) and map.has-key($var, fallback) {
+    @return $var;
+  }
 
-    @if not _is-var-string($var) {
+  @if not _is-var-string($var) {
+    @return null;
+  }
+
+  // Remove function name and parens
+  $var: string-ext.trim($var, 'var(', ')');
+
+  $name: string-ext.trim-repeating($var, ' ');
+  $fallback: null;
+  $comma: string.index($var, ',');
+
+  @if $comma !=null {
+    $name: string-ext.trim-repeating(string.slice($var, 1, $comma - 1), ' ');
+    $fallback: string-ext.trim-repeating(string.slice($var, $comma + 1), ' ');
+
+    @if _is-var-string($fallback) {
+      $fallback: _parse($fallback);
+
+      @if $fallback ==null {
+        // Invalid var() fallback string
         @return null;
+      }
     }
+  }
 
-    // Remove function name and parens
-    $var: string-ext.trim($var, 'var(', ')');
+  @if $name == '' or $fallback == '' {
+    @return null;
+  }
 
-    $name: string-ext.trim-repeating($var, ' ');
-    $fallback: null;
-    $comma: string.index($var, ',');
-
-    @if $comma !=null {
-        $name: string-ext.trim-repeating(string.slice($var, 1, $comma - 1), ' ');
-        $fallback: string-ext.trim-repeating(string.slice($var, $comma + 1), ' ');
-
-        @if _is-var-string($fallback) {
-            $fallback: _parse($fallback);
-
-            @if $fallback ==null {
-                // Invalid var() fallback string
-                @return null;
-            }
-        }
-    }
-
-    @if $name =='' or $fallback =='' {
-        @return null;
-    }
-
-    @return (name: $name, fallback: $fallback);
+  @return (name: $name, fallback: $fallback);
 }
 
 /// Parses a `var()` string into a Map with `name` and `fallback` keys.
@@ -231,11 +231,11 @@
 /// @return {Map} A Map containing a string `name` key with the custom property
 ///     name and a `fallback` key with the fallback value (which may be null).
 @function _parse-and-validate($var) {
-    $var-map: _parse($var);
+  $var-map: _parse($var);
 
-    @if $var-map ==null {
-        @error '"#{$var}" is not a valid var() string';
-    }
+  @if $var-map ==null {
+    @error '"#{$var}" is not a valid var() string';
+  }
 
-    @return $var-map;
+  @return $var-map;
 }

@@ -4,7 +4,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 // Generated stylesheet for ./list/internal/list-styles.css.
-import { css } from 'lit';
-export const styles = css `:host{background:var(--md-list-container-color, var(--md-sys-color-surface, #fef7ff));color:unset;display:flex;flex-direction:column;outline:none;padding:calc(8rem * var(--md-sys-globalscale,1)) 0;position:relative}
-`;
+import { css } from 'lit'
+export const styles = css`
+  :host {
+    background: var(--md-list-container-color, var(--md-sys-color-surface, #fef7ff));
+    color: unset;
+    display: flex;
+    flex-direction: column;
+    outline: none;
+    padding: calc(8 * var(--md-sys-globalscale, 1px)) 0;
+    position: relative;
+  }
+`
 //# sourceMappingURL=list-styles.js.map

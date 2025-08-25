@@ -121,14 +121,14 @@
   }
 
   // The default content is needed because we do a bit of trickery. If there is
-  // no slotted icon we need to have `padding-inline: calc(20rem * var(--md-sys-globalscale,1))` but if there is, we
-  // need `padding-inline: calc(16rem * var(--md-sys-globalscale,1)) calc(20rem * var(--md-sys-globalscale,1))`.
+  // no slotted icon we need to have `padding-inline: calc(20* var(--md-sys-globalscale,1px))` but if there is, we
+  // need `padding-inline: calc(16* var(--md-sys-globalscale,1px)) calc(20* var(--md-sys-globalscale,1px))`.
   //
   // So what this approach does is make the margin / padding-inline of the outer
-  // button `padding-inline: calc(16rem * var(--md-sys-globalscale,1)) calc(20rem * var(--md-sys-globalscale,1))`, so if there is something slotted, it
-  // renders correctly. This default content span then fills the extra `calc(4rem * var(--md-sys-globalscale,1))`
+  // button `padding-inline: calc(16* var(--md-sys-globalscale,1px)) calc(20* var(--md-sys-globalscale,1px))`, so if there is something slotted, it
+  // renders correctly. This default content span then fills the extra `calc(4* var(--md-sys-globalscale,1px))`
   // inline spacing if nothing is slotted which effectively makes the button's
-  // inline spacing `calc(20rem * var(--md-sys-globalscale,1))/calc(20rem * var(--md-sys-globalscale,1))`.
+  // inline spacing `calc(20* var(--md-sys-globalscale,1px))/calc(20* var(--md-sys-globalscale,1px))`.
   .fab.extended slot span {
     padding-inline-start: calc(4 * var(--md-sys-globalscale, 1px));
   }

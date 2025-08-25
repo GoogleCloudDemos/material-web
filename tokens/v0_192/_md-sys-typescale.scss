@@ -33,7 +33,7 @@ $_default: (
             null,
             calc(
               calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           )
           #{'/'} if(
@@ -41,7 +41,7 @@ $_default: (
             null,
             calc(
               calc(calc(1.5 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           ) map.get($deps, 'md-ref-typeface', 'plain')
       ),
@@ -51,7 +51,8 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(1.5 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(1.5 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'body-large-size':
@@ -59,7 +60,7 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1px)
         )
       ),
     'body-large-tracking':
@@ -68,7 +69,7 @@ $_default: (
         null,
         calc(
           calc(calc(0.03125 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'body-large-weight': map.get($deps, 'md-ref-typeface', 'weight-regular'),
@@ -83,7 +84,7 @@ $_default: (
             null,
             calc(
               calc(calc(0.875 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           )
           #{'/'} if(
@@ -91,7 +92,7 @@ $_default: (
             null,
             calc(
               calc(calc(1.25 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           ) map.get($deps, 'md-ref-typeface', 'plain')
       ),
@@ -102,7 +103,7 @@ $_default: (
         null,
         calc(
           calc(calc(1.25 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'body-medium-size':
@@ -111,7 +112,7 @@ $_default: (
         null,
         calc(
           calc(calc(0.875 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'body-medium-tracking':
@@ -120,7 +121,7 @@ $_default: (
         null,
         calc(
           calc(calc(0.015625 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'body-medium-weight': map.get($deps, 'md-ref-typeface', 'weight-regular'),
@@ -135,7 +136,7 @@ $_default: (
             null,
             calc(
               calc(calc(0.75 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           )
           #{'/'} if(
@@ -143,7 +144,7 @@ $_default: (
             null,
             calc(
               calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           ) map.get($deps, 'md-ref-typeface', 'plain')
       ),
@@ -153,7 +154,7 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1px)
         )
       ),
     'body-small-size':
@@ -162,7 +163,7 @@ $_default: (
         null,
         calc(
           calc(calc(0.75 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'body-small-tracking':
@@ -171,7 +172,7 @@ $_default: (
         null,
         calc(
           calc(calc(0.025 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'body-small-weight': map.get($deps, 'md-ref-typeface', 'weight-regular'),
@@ -186,7 +187,7 @@ $_default: (
             null,
             calc(
               calc(calc(3.5625 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           )
           #{'/'} if(
@@ -194,7 +195,7 @@ $_default: (
             null,
             calc(
               calc(calc(4 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           ) map.get($deps, 'md-ref-typeface', 'brand')
       ),
@@ -204,7 +205,7 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(4 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(4 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1px)
         )
       ),
     'display-large-size':
@@ -213,7 +214,7 @@ $_default: (
         null,
         calc(
           calc(calc(3.5625 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'display-large-tracking':
@@ -221,7 +222,7 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         -calc(calc(calc(0.015625 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-              var(--md-sys-globalscale, 1))
+              var(--md-sys-globalscale, 1px))
       ),
     'display-large-weight': map.get($deps, 'md-ref-typeface', 'weight-regular'),
     'display-medium':
@@ -235,7 +236,7 @@ $_default: (
             null,
             calc(
               calc(calc(2.8125 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           )
           #{'/'} if(
@@ -243,7 +244,7 @@ $_default: (
             null,
             calc(
               calc(calc(3.25 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           ) map.get($deps, 'md-ref-typeface', 'brand')
       ),
@@ -254,7 +255,7 @@ $_default: (
         null,
         calc(
           calc(calc(3.25 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'display-medium-size':
@@ -263,7 +264,7 @@ $_default: (
         null,
         calc(
           calc(calc(2.8125 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'display-medium-tracking':
@@ -271,7 +272,7 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(0 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(0 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1px)
         )
       ),
     'display-medium-weight': map.get($deps, 'md-ref-typeface', 'weight-regular'),
@@ -286,7 +287,7 @@ $_default: (
             null,
             calc(
               calc(calc(2.25 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           )
           #{'/'} if(
@@ -294,7 +295,7 @@ $_default: (
             null,
             calc(
               calc(calc(2.75 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           ) map.get($deps, 'md-ref-typeface', 'brand')
       ),
@@ -305,7 +306,7 @@ $_default: (
         null,
         calc(
           calc(calc(2.75 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'display-small-size':
@@ -314,7 +315,7 @@ $_default: (
         null,
         calc(
           calc(calc(2.25 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'display-small-tracking':
@@ -322,7 +323,7 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(0 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(0 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1px)
         )
       ),
     'display-small-weight': map.get($deps, 'md-ref-typeface', 'weight-regular'),
@@ -337,7 +338,7 @@ $_default: (
             null,
             calc(
               calc(calc(2 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           )
           #{'/'} if(
@@ -345,7 +346,7 @@ $_default: (
             null,
             calc(
               calc(calc(2.5 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           ) map.get($deps, 'md-ref-typeface', 'brand')
       ),
@@ -355,7 +356,8 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(2.5 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(2.5 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'headline-large-size':
@@ -363,7 +365,7 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(2 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(2 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1px)
         )
       ),
     'headline-large-tracking':
@@ -371,7 +373,7 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(0 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(0 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1px)
         )
       ),
     'headline-large-weight': map.get($deps, 'md-ref-typeface', 'weight-regular'),
@@ -386,7 +388,7 @@ $_default: (
             null,
             calc(
               calc(calc(1.75 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           )
           #{'/'} if(
@@ -394,7 +396,7 @@ $_default: (
             null,
             calc(
               calc(calc(2.25 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           ) map.get($deps, 'md-ref-typeface', 'brand')
       ),
@@ -405,7 +407,7 @@ $_default: (
         null,
         calc(
           calc(calc(2.25 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'headline-medium-size':
@@ -414,7 +416,7 @@ $_default: (
         null,
         calc(
           calc(calc(1.75 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'headline-medium-tracking':
@@ -422,7 +424,7 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(0 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(0 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1px)
         )
       ),
     'headline-medium-weight': map.get($deps, 'md-ref-typeface', 'weight-regular'),
@@ -437,7 +439,7 @@ $_default: (
             null,
             calc(
               calc(calc(1.5 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           )
           #{'/'} if(
@@ -445,7 +447,7 @@ $_default: (
             null,
             calc(
               calc(calc(2 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           ) map.get($deps, 'md-ref-typeface', 'brand')
       ),
@@ -455,7 +457,7 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(2 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(2 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1px)
         )
       ),
     'headline-small-size':
@@ -463,7 +465,8 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(1.5 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(1.5 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'headline-small-tracking':
@@ -471,7 +474,7 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(0 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(0 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1px)
         )
       ),
     'headline-small-weight': map.get($deps, 'md-ref-typeface', 'weight-regular'),
@@ -486,7 +489,7 @@ $_default: (
             null,
             calc(
               calc(calc(0.875 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           )
           #{'/'} if(
@@ -494,7 +497,7 @@ $_default: (
             null,
             calc(
               calc(calc(1.25 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           ) map.get($deps, 'md-ref-typeface', 'plain')
       ),
@@ -505,7 +508,7 @@ $_default: (
         null,
         calc(
           calc(calc(1.25 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'label-large-size':
@@ -514,7 +517,7 @@ $_default: (
         null,
         calc(
           calc(calc(0.875 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'label-large-tracking':
@@ -523,7 +526,7 @@ $_default: (
         null,
         calc(
           calc(calc(0.00625 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'label-large-weight': map.get($deps, 'md-ref-typeface', 'weight-medium'),
@@ -539,7 +542,7 @@ $_default: (
             null,
             calc(
               calc(calc(0.75 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           )
           #{'/'} if(
@@ -547,7 +550,7 @@ $_default: (
             null,
             calc(
               calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           ) map.get($deps, 'md-ref-typeface', 'plain')
       ),
@@ -557,7 +560,7 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1px)
         )
       ),
     'label-medium-size':
@@ -566,7 +569,7 @@ $_default: (
         null,
         calc(
           calc(calc(0.75 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'label-medium-tracking':
@@ -575,7 +578,7 @@ $_default: (
         null,
         calc(
           calc(calc(0.03125 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'label-medium-weight': map.get($deps, 'md-ref-typeface', 'weight-medium'),
@@ -591,7 +594,7 @@ $_default: (
             null,
             calc(
               calc(calc(0.6875 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           )
           #{'/'} if(
@@ -599,7 +602,7 @@ $_default: (
             null,
             calc(
               calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           ) map.get($deps, 'md-ref-typeface', 'plain')
       ),
@@ -609,7 +612,7 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1px)
         )
       ),
     'label-small-size':
@@ -618,7 +621,7 @@ $_default: (
         null,
         calc(
           calc(calc(0.6875 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'label-small-tracking':
@@ -627,7 +630,7 @@ $_default: (
         null,
         calc(
           calc(calc(0.03125 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'label-small-weight': map.get($deps, 'md-ref-typeface', 'weight-medium'),
@@ -642,7 +645,7 @@ $_default: (
             null,
             calc(
               calc(calc(1.375 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           )
           #{'/'} if(
@@ -650,7 +653,7 @@ $_default: (
             null,
             calc(
               calc(calc(1.75 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           ) map.get($deps, 'md-ref-typeface', 'brand')
       ),
@@ -661,7 +664,7 @@ $_default: (
         null,
         calc(
           calc(calc(1.75 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'title-large-size':
@@ -670,7 +673,7 @@ $_default: (
         null,
         calc(
           calc(calc(1.375 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'title-large-tracking':
@@ -678,7 +681,7 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(0 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(0 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1px)
         )
       ),
     'title-large-weight': map.get($deps, 'md-ref-typeface', 'weight-regular'),
@@ -693,7 +696,7 @@ $_default: (
             null,
             calc(
               calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           )
           #{'/'} if(
@@ -701,7 +704,7 @@ $_default: (
             null,
             calc(
               calc(calc(1.5 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           ) map.get($deps, 'md-ref-typeface', 'plain')
       ),
@@ -711,7 +714,8 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(1.5 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(1.5 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'title-medium-size':
@@ -719,7 +723,7 @@ $_default: (
         $exclude-hardcoded-values,
         null,
         calc(
-          calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1)
+          calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16) * 16 * var(--md-sys-globalscale, 1px)
         )
       ),
     'title-medium-tracking':
@@ -728,7 +732,7 @@ $_default: (
         null,
         calc(
           calc(calc(0.009375 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'title-medium-weight': map.get($deps, 'md-ref-typeface', 'weight-medium'),
@@ -743,7 +747,7 @@ $_default: (
             null,
             calc(
               calc(calc(0.875 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           )
           #{'/'} if(
@@ -751,7 +755,7 @@ $_default: (
             null,
             calc(
               calc(calc(1.25 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-                var(--md-sys-globalscale, 1)
+                var(--md-sys-globalscale, 1px)
             )
           ) map.get($deps, 'md-ref-typeface', 'plain')
       ),
@@ -762,7 +766,7 @@ $_default: (
         null,
         calc(
           calc(calc(1.25 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'title-small-size':
@@ -771,7 +775,7 @@ $_default: (
         null,
         calc(
           calc(calc(0.875 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'title-small-tracking':
@@ -780,7 +784,7 @@ $_default: (
         null,
         calc(
           calc(calc(0.00625 * var(--md-sys-globalscale, 1px)) * 16) * 16 *
-            var(--md-sys-globalscale, 1)
+            var(--md-sys-globalscale, 1px)
         )
       ),
     'title-small-weight': map.get($deps, 'md-ref-typeface', 'weight-medium')
