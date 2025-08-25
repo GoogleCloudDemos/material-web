@@ -15,55 +15,58 @@
 // go/keep-sorted end
 
 $supported-tokens: (
-    // go/keep-sorted start
-    'active-indicator-color',
-    'active-indicator-width',
-    'four-color-active-indicator-four-color',
-    'four-color-active-indicator-one-color',
-    'four-color-active-indicator-three-color',
-    'four-color-active-indicator-two-color',
-    'size',
-    // go/keep-sorted end
+  // go/keep-sorted start
+  'active-indicator-color',
+  'active-indicator-width',
+  'four-color-active-indicator-four-color',
+  'four-color-active-indicator-one-color',
+  'four-color-active-indicator-three-color',
+  'four-color-active-indicator-two-color',
+  'size',
+  // go/keep-sorted end
 );
 
 $unsupported-tokens: (
-    // go/keep-sorted start
-    // must be circular
-    'active-indicator-shape',
-    // go/keep-sorted end
+  // go/keep-sorted start
+  // must be circular
+  'active-indicator-shape',
+  // go/keep-sorted end
 );
 
 $_default: (
-    'md-sys-color': md-sys-color.values-light(),
-    'md-sys-shape': md-sys-shape.values(),
+  'md-sys-color': md-sys-color.values-light(),
+  'md-sys-shape': md-sys-shape.values(),
 );
 
-@function values($deps: $_default,
-    $exclude-hardcoded-values: false,
-    $exclude-custom-properties: false) {
-    $tokens: validate.values(md-comp-circular-progress-indicator.values($deps,
-                $exclude-hardcoded-values ),
-            $supported-tokens: $supported-tokens,
-            $unsupported-tokens: $unsupported-tokens );
+@function values(
+  $deps: $_default,
+  $exclude-hardcoded-values: false,
+  $exclude-custom-properties: false
+) {
+  $tokens: validate.values(
+    md-comp-circular-progress-indicator.values($deps, $exclude-hardcoded-values),
+    $supported-tokens: $supported-tokens,
+    $unsupported-tokens: $unsupported-tokens
+  );
 
-    @if not $exclude-hardcoded-values {
-        // must be set as a raw % for compatibility between rendering border or svg.
-        $width: map.get($tokens, 'active-indicator-width');
-        $size: map.get($tokens, 'size');
-        $container-padding: calc(4rem * var(--md-sys-globalscale, 1));
-        $size-without-padding: $size - $container-padding - $container-padding;
-        $tokens: map.set($tokens,
-                'active-indicator-width',
-                math.div($width, $size-without-padding) * 100);
+  @if not $exclude-hardcoded-values {
+    // must be set as a raw % for compatibility between rendering border or svg.
+    $width: map.get($tokens, 'active-indicator-width');
+    $size: map.get($tokens, 'size');
+    $container-padding: calc(4 * var(--md-sys-globalscale, 1px));
+    $size-without-padding: $size - $container-padding - $container-padding;
+    $tokens: map.set(
+      $tokens,
+      'active-indicator-width',
+      math.div($width, $size-without-padding) * 100
+    );
+  }
+
+  @if not $exclude-custom-properties {
+    @each $token, $value in $tokens {
+      $tokens: map.set($tokens, $token, var(--md-circular-progress-#{$token}, #{$value}));
     }
+  }
 
-    @if not $exclude-custom-properties {
-        @each $token, $value in $tokens {
-            $tokens: map.set($tokens,
-                    $token,
-                    var(--md-circular-progress-#{$token}, #{$value}));
-        }
-    }
-
-    @return $tokens;
+  @return $tokens;
 }

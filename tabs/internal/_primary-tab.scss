@@ -12,37 +12,37 @@
 // go/keep-sorted end
 
 @mixin theme($tokens) {
-    $supported-tokens: tokens.$md-comp-primary-tab-supported-tokens;
+  $supported-tokens: tokens.$md-comp-primary-tab-supported-tokens;
 
-    @each $token, $value in $tokens {
-        @if list.index($supported-tokens, $token)==null {
-            @error 'Token `#{$token}` is not a supported token.';
-        }
-
-        @if $value {
-            --md-primary-tab-#{$token}: #{$value};
-        }
+  @each $token, $value in $tokens {
+    @if list.index($supported-tokens, $token) ==null {
+      @error 'Token `#{$token}` is not a supported token.';
     }
+
+    @if $value {
+      --md-primary-tab-#{$token}: #{$value};
+    }
+  }
 }
 
 @mixin styles() {
-    $tokens: tokens.md-comp-primary-tab-values();
+  $tokens: tokens.md-comp-primary-tab-values();
 
-    :host {
-        // Only use the logical properties.
-        $tokens: map.remove($tokens, 'container-shape');
+  :host {
+    // Only use the logical properties.
+    $tokens: map.remove($tokens, 'container-shape');
 
-        @each $token, $value in $tokens {
-            --_#{$token}: #{$value};
-        }
+    @each $token, $value in $tokens {
+      --_#{$token}: #{$value};
     }
+  }
 
-    .content.stacked {
-        flex-direction: column;
-        gap: calc(2rem * var(--md-sys-globalscale, 1));
-    }
+  .content.stacked {
+    flex-direction: column;
+    gap: calc(2 * var(--md-sys-globalscale, 1px));
+  }
 
-    .content.stacked.has-icon.has-label {
-        height: var(--_with-icon-and-label-text-container-height);
-    }
+  .content.stacked.has-icon.has-label {
+    height: var(--_with-icon-and-label-text-container-height);
+  }
 }

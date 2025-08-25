@@ -17,10 +17,12 @@
 @use './md-sys-color';
 
 $_default: (
-    'md-sys-color': md-sys-color.values-light(),
+  'md-sys-color': md-sys-color.values-light(),
 );
 
 @function values($deps: $_default, $exclude-hardcoded-values: false) {
-    @return ('color': map.get($deps, 'md-sys-color', 'outline-variant'),
-        'thickness': if($exclude-hardcoded-values, null, calc(1rem * var(--md-sys-globalscale, 1))));
+  @return (
+    'color': map.get($deps, 'md-sys-color', 'outline-variant'),
+    'thickness': if($exclude-hardcoded-values, null, calc(1 * var(--md-sys-globalscale, 1px)))
+  );
 }
