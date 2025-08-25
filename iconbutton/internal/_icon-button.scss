@@ -14,108 +14,124 @@
 // go/keep-sorted end
 
 @mixin theme($tokens) {
-    $supported-tokens: tokens.$md-comp-icon-button-supported-tokens;
+  $supported-tokens: tokens.$md-comp-icon-button-supported-tokens;
 
-    @each $token, $value in $tokens {
-        @if list.index($supported-tokens, $token)==null {
-            @error 'Token `#{$token}` is not a supported token.';
-        }
-
-        @if $value {
-            --md-icon-button-#{$token}: #{$value};
-        }
+  @each $token, $value in $tokens {
+    @if list.index($supported-tokens, $token) ==null {
+      @error 'Token `#{$token}` is not a supported token.';
     }
+
+    @if $value {
+      --md-icon-button-#{$token}: #{$value};
+    }
+  }
 }
 
 @mixin styles() {
-    $tokens: tokens.md-comp-icon-button-values();
+  $tokens: tokens.md-comp-icon-button-values();
 
-    :host {
-        @each $token, $value in $tokens {
-            --_#{$token}: #{$value};
-        }
-
-        // These custom properties are not used, so set defaults so token tests pass
-        // for <md-icon-button>.
-        --_container-shape-start-start: 0;
-        --_container-shape-start-end: 0;
-        --_container-shape-end-end: 0;
-        --_container-shape-end-start: 0;
-        --_container-height: 0;
-        --_container-width: 0;
-
-        height: var(--_state-layer-height);
-        width: var(--_state-layer-width);
+  :host {
+    @each $token, $value in $tokens {
+      --_#{$token}: #{$value};
     }
 
-    :host([touch-target='wrapper']) {
-        margin: max(calc(0rem * var(--md-sys-globalscale, 1)), (calc(48rem * var(--md-sys-globalscale, 1)) - var(--_state-layer-height))/2) max(calc(0rem * var(--md-sys-globalscale, 1)), (calc(48rem * var(--md-sys-globalscale, 1)) - var(--_state-layer-width))/2);
+    // These custom properties are not used, so set defaults so token tests pass
+    // for <md-icon-button>.
+    --_container-shape-start-start: 0;
+    --_container-shape-start-end: 0;
+    --_container-shape-end-end: 0;
+    --_container-shape-end-start: 0;
+    --_container-height: 0;
+    --_container-width: 0;
+
+    height: var(--_state-layer-height);
+    width: var(--_state-layer-width);
+  }
+
+  :host([touch-target='wrapper']) {
+    margin: max(
+        calc(0 * var(--md-sys-globalscale, 1px)),
+        (calc(48 * var(--md-sys-globalscale, 1px)) - var(--_state-layer-height))/2
+      )
+      max(
+        calc(0 * var(--md-sys-globalscale, 1px)),
+        (calc(48 * var(--md-sys-globalscale, 1px)) - var(--_state-layer-width))/2
+      );
+  }
+
+  md-focus-ring {
+    @include focus-ring.theme(
+      (
+        'shape-start-start': var(--_state-layer-shape),
+        'shape-start-end': var(--_state-layer-shape),
+        'shape-end-end': var(--_state-layer-shape),
+        'shape-end-start': var(--_state-layer-shape),
+      )
+    );
+  }
+
+  .standard {
+    background-color: transparent;
+    color: var(--_icon-color);
+
+    @include ripple.theme(
+      (
+        hover-color: var(--_hover-state-layer-color),
+        hover-opacity: var(--_hover-state-layer-opacity),
+        pressed-color: var(--_pressed-state-layer-color),
+        pressed-opacity: var(--_pressed-state-layer-opacity),
+      )
+    );
+
+    &:hover {
+      color: var(--_hover-icon-color);
     }
 
-    md-focus-ring {
-        @include focus-ring.theme(('shape-start-start': var(--_state-layer-shape),
-                'shape-start-end': var(--_state-layer-shape),
-                'shape-end-end': var(--_state-layer-shape),
-                'shape-end-start': var(--_state-layer-shape),
-            ));
+    &:focus {
+      color: var(--_focus-icon-color);
     }
 
-    .standard {
-        background-color: transparent;
-        color: var(--_icon-color);
-
-        @include ripple.theme((hover-color: var(--_hover-state-layer-color),
-                hover-opacity: var(--_hover-state-layer-opacity),
-                pressed-color: var(--_pressed-state-layer-color),
-                pressed-opacity: var(--_pressed-state-layer-opacity),
-            ));
-
-        &:hover {
-            color: var(--_hover-icon-color);
-        }
-
-        &:focus {
-            color: var(--_focus-icon-color);
-        }
-
-        &:active {
-            color: var(--_pressed-icon-color);
-        }
-
-        &:is(:disabled, [aria-disabled='true']) {
-            color: var(--_disabled-icon-color);
-        }
+    &:active {
+      color: var(--_pressed-icon-color);
     }
 
-    md-ripple {
-        border-radius: var(--_state-layer-shape);
+    &:is(:disabled, [aria-disabled='true']) {
+      color: var(--_disabled-icon-color);
+    }
+  }
+
+  md-ripple {
+    border-radius: var(--_state-layer-shape);
+  }
+
+  .standard:is(:disabled, [aria-disabled='true']) {
+    opacity: var(--_disabled-icon-opacity);
+  }
+
+  .selected {
+    &:not(:disabled, [aria-disabled='true']) {
+      color: var(--_selected-icon-color);
+
+      &:hover {
+        color: var(--_selected-hover-icon-color);
+      }
+
+      &:focus {
+        color: var(--_selected-focus-icon-color);
+      }
+
+      &:active {
+        color: var(--_selected-pressed-icon-color);
+      }
     }
 
-    .standard:is(:disabled, [aria-disabled='true']) {
-        opacity: var(--_disabled-icon-opacity);
-    }
-
-    .selected {
-        &:not(:disabled, [aria-disabled='true']) {
-            color: var(--_selected-icon-color);
-
-            &:hover {
-                color: var(--_selected-hover-icon-color);
-            }
-
-            &:focus {
-                color: var(--_selected-focus-icon-color);
-            }
-
-            &:active {
-                color: var(--_selected-pressed-icon-color);
-            }
-        }
-
-        @include ripple.theme((hover-color: var(--_selected-hover-state-layer-color),
-                hover-opacity: var(--_selected-hover-state-layer-opacity),
-                pressed-color: var(--_selected-pressed-state-layer-color),
-                pressed-opacity: var(--_selected-pressed-state-layer-opacity),
-            ));
-    }
+    @include ripple.theme(
+      (
+        hover-color: var(--_selected-hover-state-layer-color),
+        hover-opacity: var(--_selected-hover-state-layer-opacity),
+        pressed-color: var(--_selected-pressed-state-layer-color),
+        pressed-opacity: var(--_selected-pressed-state-layer-opacity),
+      )
+    );
+  }
 }

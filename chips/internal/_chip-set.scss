@@ -4,9 +4,9 @@
 //
 
 @mixin styles() {
-    :host {
-        display: flex;
-        flex-wrap: wrap;
-        gap: calc(8rem * var(--md-sys-globalscale, 1));
-    }
+  :host {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(8 * var(--md-sys-globalscale, 1px));
+  }
 }

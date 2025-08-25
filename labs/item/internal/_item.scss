@@ -25,75 +25,75 @@
 ///   // ...
 ///
 @mixin styles() {
-    $tokens: tokens.md-comp-item-values();
+  $tokens: tokens.md-comp-item-values();
 
-    :host {
-        color: map.get($tokens, 'label-text-color');
-        font-family: map.get($tokens, 'label-text-font');
-        font-size: map.get($tokens, 'label-text-size');
-        font-weight: map.get($tokens, 'label-text-weight');
-        line-height: map.get($tokens, 'label-text-line-height');
-        align-items: center;
-        box-sizing: border-box;
-        display: flex;
-        gap: calc(16rem * var(--md-sys-globalscale, 1));
-        min-height: calc(56rem * var(--md-sys-globalscale, 1));
-        overflow: hidden;
-        padding: calc(12rem * var(--md-sys-globalscale, 1)) calc(16rem * var(--md-sys-globalscale, 1));
-        position: relative;
-        text-overflow: ellipsis;
-    }
+  :host {
+    color: map.get($tokens, 'label-text-color');
+    font-family: map.get($tokens, 'label-text-font');
+    font-size: map.get($tokens, 'label-text-size');
+    font-weight: map.get($tokens, 'label-text-weight');
+    line-height: map.get($tokens, 'label-text-line-height');
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    gap: calc(16 * var(--md-sys-globalscale, 1px));
+    min-height: calc(56 * var(--md-sys-globalscale, 1px));
+    overflow: hidden;
+    padding: calc(12 * var(--md-sys-globalscale, 1px)) calc(16 * var(--md-sys-globalscale, 1px));
+    position: relative;
+    text-overflow: ellipsis;
+  }
 
-    :host([multiline]) {
-        min-height: calc(72rem * var(--md-sys-globalscale, 1));
-    }
+  :host([multiline]) {
+    min-height: calc(72 * var(--md-sys-globalscale, 1px));
+  }
 
-    [name='overline'] {
-        color: map.get($tokens, 'overline-color');
-        font-family: map.get($tokens, 'overline-font');
-        font-size: map.get($tokens, 'overline-size');
-        font-weight: map.get($tokens, 'overline-weight');
-        line-height: map.get($tokens, 'overline-line-height');
-    }
+  [name='overline'] {
+    color: map.get($tokens, 'overline-color');
+    font-family: map.get($tokens, 'overline-font');
+    font-size: map.get($tokens, 'overline-size');
+    font-weight: map.get($tokens, 'overline-weight');
+    line-height: map.get($tokens, 'overline-line-height');
+  }
 
-    [name='supporting-text'] {
-        color: map.get($tokens, 'supporting-text-color');
-        font-family: map.get($tokens, 'supporting-text-font');
-        font-size: map.get($tokens, 'supporting-text-size');
-        font-weight: map.get($tokens, 'supporting-text-weight');
-        line-height: map.get($tokens, 'supporting-text-line-height');
-    }
+  [name='supporting-text'] {
+    color: map.get($tokens, 'supporting-text-color');
+    font-family: map.get($tokens, 'supporting-text-font');
+    font-size: map.get($tokens, 'supporting-text-size');
+    font-weight: map.get($tokens, 'supporting-text-weight');
+    line-height: map.get($tokens, 'supporting-text-line-height');
+  }
 
-    [name='trailing-supporting-text'] {
-        color: map.get($tokens, 'trailing-supporting-text-color');
-        font-family: map.get($tokens, 'trailing-supporting-text-font');
-        font-size: map.get($tokens, 'trailing-supporting-text-size');
-        font-weight: map.get($tokens, 'trailing-supporting-text-weight');
-        line-height: map.get($tokens, 'trailing-supporting-text-line-height');
-    }
+  [name='trailing-supporting-text'] {
+    color: map.get($tokens, 'trailing-supporting-text-color');
+    font-family: map.get($tokens, 'trailing-supporting-text-font');
+    font-size: map.get($tokens, 'trailing-supporting-text-size');
+    font-weight: map.get($tokens, 'trailing-supporting-text-weight');
+    line-height: map.get($tokens, 'trailing-supporting-text-line-height');
+  }
 
-    // A slot for background container elements, such as ripples and focus rings.
-    [name='container']::slotted(*) {
-        inset: 0;
-        position: absolute;
-    }
+  // A slot for background container elements, such as ripples and focus rings.
+  [name='container']::slotted(*) {
+    inset: 0;
+    position: absolute;
+  }
 
-    .default-slot {
-        // Needed since the default slot can have just text content, and ellipsis
-        // need an inline display.
-        display: inline;
-    }
+  .default-slot {
+    // Needed since the default slot can have just text content, and ellipsis
+    // need an inline display.
+    display: inline;
+  }
 
-    .default-slot,
-    .text ::slotted(*) {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+  .default-slot,
+  .text ::slotted(*) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-    .text {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        overflow: hidden;
-    }
+  .text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+  }
 }

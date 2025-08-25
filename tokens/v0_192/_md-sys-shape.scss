@@ -13,16 +13,60 @@
 //
 
 @function values($exclude-hardcoded-values: false) {
-    @return ('corner-extra-large': if($exclude-hardcoded-values, null, calc(28rem * var(--md-sys-globalscale, 1))),
-        'corner-extra-large-top': if($exclude-hardcoded-values, null, (calc(28rem * var(--md-sys-globalscale, 1)) calc(28rem * var(--md-sys-globalscale, 1)) calc(0rem * var(--md-sys-globalscale, 1)) calc(0rem * var(--md-sys-globalscale, 1)))),
-        'corner-extra-small': if($exclude-hardcoded-values, null, calc(4rem * var(--md-sys-globalscale, 1))),
-        'corner-extra-small-top': if($exclude-hardcoded-values, null, (calc(4rem * var(--md-sys-globalscale, 1)) calc(4rem * var(--md-sys-globalscale, 1)) calc(0rem * var(--md-sys-globalscale, 1)) calc(0rem * var(--md-sys-globalscale, 1)))),
-        'corner-full': if($exclude-hardcoded-values, null, calc(9999rem * var(--md-sys-globalscale, 1))),
-        'corner-large': if($exclude-hardcoded-values, null, calc(16rem * var(--md-sys-globalscale, 1))),
-        'corner-large-end': if($exclude-hardcoded-values, null, (calc(0rem * var(--md-sys-globalscale, 1)) calc(16rem * var(--md-sys-globalscale, 1)) calc(16rem * var(--md-sys-globalscale, 1)) calc(0rem * var(--md-sys-globalscale, 1)))),
-        'corner-large-start': if($exclude-hardcoded-values, null, (calc(16rem * var(--md-sys-globalscale, 1)) calc(0rem * var(--md-sys-globalscale, 1)) calc(0rem * var(--md-sys-globalscale, 1)) calc(16rem * var(--md-sys-globalscale, 1)))),
-        'corner-large-top': if($exclude-hardcoded-values, null, (calc(16rem * var(--md-sys-globalscale, 1)) calc(16rem * var(--md-sys-globalscale, 1)) calc(0rem * var(--md-sys-globalscale, 1)) calc(0rem * var(--md-sys-globalscale, 1)))),
-        'corner-medium': if($exclude-hardcoded-values, null, calc(12rem * var(--md-sys-globalscale, 1))),
-        'corner-none': if($exclude-hardcoded-values, null, calc(0rem * var(--md-sys-globalscale, 1))),
-        'corner-small': if($exclude-hardcoded-values, null, calc(8rem * var(--md-sys-globalscale, 1))));
+  @return (
+    'corner-extra-large':
+      if($exclude-hardcoded-values, null, calc(28 * var(--md-sys-globalscale, 1px))),
+    'corner-extra-large-top':
+      if(
+        $exclude-hardcoded-values,
+        null,
+        (
+          calc(28 * var(--md-sys-globalscale, 1px)) calc(28 * var(--md-sys-globalscale, 1px))
+            calc(0 * var(--md-sys-globalscale, 1px)) calc(0 * var(--md-sys-globalscale, 1px))
+        )
+      ),
+    'corner-extra-small':
+      if($exclude-hardcoded-values, null, calc(4 * var(--md-sys-globalscale, 1px))),
+    'corner-extra-small-top':
+      if(
+        $exclude-hardcoded-values,
+        null,
+        (
+          calc(4 * var(--md-sys-globalscale, 1px)) calc(4 * var(--md-sys-globalscale, 1px))
+            calc(0 * var(--md-sys-globalscale, 1px)) calc(0 * var(--md-sys-globalscale, 1px))
+        )
+      ),
+    'corner-full': if($exclude-hardcoded-values, null, calc(9999 * var(--md-sys-globalscale, 1px))),
+    'corner-large': if($exclude-hardcoded-values, null, calc(16 * var(--md-sys-globalscale, 1px))),
+    'corner-large-end':
+      if(
+        $exclude-hardcoded-values,
+        null,
+        (
+          calc(0 * var(--md-sys-globalscale, 1px)) calc(16 * var(--md-sys-globalscale, 1px))
+            calc(16 * var(--md-sys-globalscale, 1px)) calc(0 * var(--md-sys-globalscale, 1px))
+        )
+      ),
+    'corner-large-start':
+      if(
+        $exclude-hardcoded-values,
+        null,
+        (
+          calc(16 * var(--md-sys-globalscale, 1px)) calc(0 * var(--md-sys-globalscale, 1px))
+            calc(0 * var(--md-sys-globalscale, 1px)) calc(16 * var(--md-sys-globalscale, 1px))
+        )
+      ),
+    'corner-large-top':
+      if(
+        $exclude-hardcoded-values,
+        null,
+        (
+          calc(16 * var(--md-sys-globalscale, 1px)) calc(16 * var(--md-sys-globalscale, 1px))
+            calc(0 * var(--md-sys-globalscale, 1px)) calc(0 * var(--md-sys-globalscale, 1px))
+        )
+      ),
+    'corner-medium': if($exclude-hardcoded-values, null, calc(12 * var(--md-sys-globalscale, 1px))),
+    'corner-none': if($exclude-hardcoded-values, null, calc(0 * var(--md-sys-globalscale, 1px))),
+    'corner-small': if($exclude-hardcoded-values, null, calc(8 * var(--md-sys-globalscale, 1px)))
+  );
 }

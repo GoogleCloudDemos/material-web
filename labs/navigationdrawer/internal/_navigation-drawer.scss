@@ -17,78 +17,81 @@ $delay: 0s;
 $transition-duration: 0.25s;
 
 $_reference: (
-    'container-color': #fff,
-    'container-height': 100%,
-    'container-shape': 0 calc(16rem * var(--md-sys-globalscale, 1)) calc(16rem * var(--md-sys-globalscale, 1)) 0,
-    'container-width': calc(360rem * var(--md-sys-globalscale, 1)),
-    // b/216384393 - Temporary existing token to use for shadow color
-    'divider-color': #000,
-    'modal-container-elevation': 1,
-    'standard-container-elevation': 0,
+  'container-color': #fff,
+  'container-height': 100%,
+  'container-shape': 0 calc(16 * var(--md-sys-globalscale, 1px))
+    calc(16 * var(--md-sys-globalscale, 1px)) 0,
+  'container-width': calc(360 * var(--md-sys-globalscale, 1px)),
+  // b/216384393 - Temporary existing token to use for shadow color
+  'divider-color': #000,
+  'modal-container-elevation': 1,
+  'standard-container-elevation': 0,
 );
 
 @mixin theme($tokens) {
-    // $supported-tokens: tokens.$md-comp-navigation-drawer-supported-tokens;
+  // $supported-tokens: tokens.$md-comp-navigation-drawer-supported-tokens;
 
-    @each $token, $value in $tokens {
-        // @if list.index($supported-tokens, $token) == null {
-        //   @error 'Token `#{$token}` is not a supported token.';
-        // }
+  @each $token, $value in $tokens {
+    // @if list.index($supported-tokens, $token) == null {
+    //   @error 'Token `#{$token}` is not a supported token.';
+    // }
 
-        @if $value {
-            --md-navigation-drawer-#{$token}: #{$value};
-        }
+    @if $value {
+      --md-navigation-drawer-#{$token}: #{$value};
     }
+  }
 }
 
 @mixin styles() {
-    $tokens: $_reference;
+  $tokens: $_reference;
 
-    :host {
-        @each $token, $value in $tokens {
-            --_#{$token}: var(--md-navigation-drawer-#{$token}, #{$value});
-        }
-
-        @include elevation.theme(('level': var(--_standard-container-elevation),
-                'shadow-color': var(--_divider-color),
-            ));
+  :host {
+    @each $token, $value in $tokens {
+      --_#{$token}: var(--md-navigation-drawer-#{$token}, #{$value});
     }
 
-    :host {
-        display: flex;
-    }
+    @include elevation.theme(
+      (
+        'level': var(--_standard-container-elevation),
+        'shadow-color': var(--_divider-color),
+      )
+    );
+  }
 
-    .md3-navigation-drawer {
-        inline-size: 0;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: flex-end;
-        overflow: hidden;
-        overflow-y: auto;
-        visibility: hidden;
+  :host {
+    display: flex;
+  }
 
-        transition: inline-size $transition-duration $curve $delay,
-            visibility $default $curve $transition-duration;
-    }
+  .md3-navigation-drawer {
+    inline-size: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    overflow-y: auto;
+    visibility: hidden;
 
-    md-elevation {
-        z-index: 0;
-    }
+    transition: inline-size $transition-duration $curve $delay,
+      visibility $default $curve $transition-duration;
+  }
 
-    .md3-navigation-drawer--opened {
-        visibility: visible;
+  md-elevation {
+    z-index: 0;
+  }
 
-        transition: inline-size $transition-duration $curve $delay,
-            visibility $default $curve $default;
-    }
+  .md3-navigation-drawer--opened {
+    visibility: visible;
 
-    .md3-navigation-drawer--pivot-at-start {
-        justify-content: flex-start;
-    }
+    transition: inline-size $transition-duration $curve $delay, visibility $default $curve $default;
+  }
 
-    .md3-navigation-drawer__slot-content {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-    }
+  .md3-navigation-drawer--pivot-at-start {
+    justify-content: flex-start;
+  }
+
+  .md3-navigation-drawer__slot-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
 }

@@ -11,66 +11,66 @@
 // go/keep-sorted end
 
 @mixin theme($tokens) {
-    // $supported-tokens: tokens.$md-comp-badge-supported-tokens;
+  // $supported-tokens: tokens.$md-comp-badge-supported-tokens;
 
-    @each $token, $value in $tokens {
-        // @if list.index($supported-tokens, $token) == null {
-        //   @error 'Token `#{$token}` is not a supported token.';
-        // }
+  @each $token, $value in $tokens {
+    // @if list.index($supported-tokens, $token) == null {
+    //   @error 'Token `#{$token}` is not a supported token.';
+    // }
 
-        @if $value {
-            --md-badge-#{$token}: #{$value};
-        }
+    @if $value {
+      --md-badge-#{$token}: #{$value};
     }
+  }
 }
 
 @mixin styles() {
-    $tokens: tokens.md-comp-badge-values();
+  $tokens: tokens.md-comp-badge-values();
 
-    :host {
-        @each $token, $value in $tokens {
-            --_#{$token}: #{$value};
-        }
+  :host {
+    @each $token, $value in $tokens {
+      --_#{$token}: #{$value};
+    }
+  }
+
+  .md3-badge {
+    inset-inline-start: 50%;
+    margin-inline-start: calc(6 * var(--md-sys-globalscale, 1px));
+    margin-block-start: calc(4 * var(--md-sys-globalscale, 1px));
+    position: absolute;
+    inset-block-start: calc(0 * var(--md-sys-globalscale, 1px));
+    background-color: var(--_color);
+    border-radius: var(--_shape);
+    height: var(--_size);
+
+    &:not(.md3-badge--large) {
+      // Separate selector since large uses min-width
+      width: var(--_size);
     }
 
-    .md3-badge {
-        inset-inline-start: 50%;
-        margin-inline-start: calc(6rem * var(--md-sys-globalscale, 1));
-        margin-block-start: calc(4rem * var(--md-sys-globalscale, 1));
-        position: absolute;
-        inset-block-start: calc(0rem * var(--md-sys-globalscale, 1));
-        background-color: var(--_color);
-        border-radius: var(--_shape);
-        height: var(--_size);
+    &.md3-badge--large {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-inline-start: calc(2 * var(--md-sys-globalscale, 1px));
+      margin-block-start: calc(1 * var(--md-sys-globalscale, 1px));
+      background-color: var(--_large-color);
+      border-radius: var(--_large-shape);
+      height: var(--_large-size);
+      min-width: var(--_large-size);
+      color: var(--_large-label-text-color);
 
-        &:not(.md3-badge--large) {
-            // Separate selector since large uses min-width
-            width: var(--_size);
-        }
-
-        &.md3-badge--large {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-inline-start: calc(2rem * var(--md-sys-globalscale, 1));
-            margin-block-start: calc(1rem * var(--md-sys-globalscale, 1));
-            background-color: var(--_large-color);
-            border-radius: var(--_large-shape);
-            height: var(--_large-size);
-            min-width: var(--_large-size);
-            color: var(--_large-label-text-color);
-
-            .md3-badge__value {
-                padding: calc(0rem * var(--md-sys-globalscale, 1)) calc(4rem * var(--md-sys-globalscale, 1));
-                text-align: center;
-            }
-        }
+      .md3-badge__value {
+        padding: calc(0 * var(--md-sys-globalscale, 1px)) calc(4 * var(--md-sys-globalscale, 1px));
+        text-align: center;
+      }
     }
+  }
 
-    .md3-badge__value {
-        font-family: var(--_large-label-text-font);
-        font-size: var(--_large-label-text-size);
-        line-height: var(--_large-label-text-line-height);
-        font-weight: var(--_large-label-text-weight);
-    }
+  .md3-badge__value {
+    font-family: var(--_large-label-text-font);
+    font-size: var(--_large-label-text-size);
+    line-height: var(--_large-label-text-line-height);
+    font-weight: var(--_large-label-text-weight);
+  }
 }

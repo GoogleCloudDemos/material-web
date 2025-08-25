@@ -4,20 +4,24 @@
 //
 
 @mixin styles() {
-    .touch {
-        position: absolute;
-        top: 50%;
-        height: calc(48rem * var(--md-sys-globalscale, 1));
-        left: 0;
-        right: 0;
-        transform: translateY(-50%);
-    }
+  .touch {
+    position: absolute;
+    top: 50%;
+    height: calc(48 * var(--md-sys-globalscale, 1px));
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
 
-    :host([touch-target='wrapper']) {
-        margin: max(calc(0rem * var(--md-sys-globalscale, 1)), (calc(48rem * var(--md-sys-globalscale, 1)) - var(--_container-height)) / 2) 0;
-    }
+  :host([touch-target='wrapper']) {
+    margin: max(
+        calc(0 * var(--md-sys-globalscale, 1px)),
+        (calc(48 * var(--md-sys-globalscale, 1px)) - var(--_container-height)) / 2
+      )
+      0;
+  }
 
-    :host([touch-target='none']) .touch {
-        display: none;
-    }
+  :host([touch-target='none']) .touch {
+    display: none;
+  }
 }

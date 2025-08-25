@@ -19,89 +19,92 @@ $_delay: 0s;
 $_transition-duration: 0.25s;
 
 $_reference: (
-    'container-color': #fff,
-    'container-height': 100%,
-    'container-shape': 0 calc(16rem * var(--md-sys-globalscale, 1)) calc(16rem * var(--md-sys-globalscale, 1)) 0,
-    'container-width': calc(360rem * var(--md-sys-globalscale, 1)),
-    // b/216384393 - Temporary existing token to use for shadow color
-    'divider-color': #000,
-    'modal-container-elevation': 1,
-    'scrim-color': null,
-    'scrim-opacity': 0.04,
-    'standard-container-elevation': 0,
+  'container-color': #fff,
+  'container-height': 100%,
+  'container-shape': 0 calc(16 * var(--md-sys-globalscale, 1px))
+    calc(16 * var(--md-sys-globalscale, 1px)) 0,
+  'container-width': calc(360 * var(--md-sys-globalscale, 1px)),
+  // b/216384393 - Temporary existing token to use for shadow color
+  'divider-color': #000,
+  'modal-container-elevation': 1,
+  'scrim-color': null,
+  'scrim-opacity': 0.04,
+  'standard-container-elevation': 0,
 );
 
 @mixin theme($tokens) {
-    // $supported-tokens: tokens.$md-comp-navigation-drawer-modal-supported-tokens;
+  // $supported-tokens: tokens.$md-comp-navigation-drawer-modal-supported-tokens;
 
-    @each $token, $value in $tokens {
-        // @if list.index($supported-tokens, $token) == null {
-        //   @error 'Token `#{$token}` is not a supported token.';
-        // }
+  @each $token, $value in $tokens {
+    // @if list.index($supported-tokens, $token) == null {
+    //   @error 'Token `#{$token}` is not a supported token.';
+    // }
 
-        @if $value {
-            --md-navigation-drawer-modal-#{$token}: #{$value};
-        }
+    @if $value {
+      --md-navigation-drawer-modal-#{$token}: #{$value};
     }
+  }
 }
 
 @mixin styles() {
-    $tokens: $_reference;
+  $tokens: $_reference;
 
-    :host {
-        @each $token, $value in $tokens {
-            --_#{$token}: var(--md-navigation-drawer-modal-#{$token}, #{$value});
-        }
-
-        @include elevation.theme(('level': var(--_modal-container-elevation),
-            ));
+  :host {
+    @each $token, $value in $tokens {
+      --_#{$token}: var(--md-navigation-drawer-modal-#{$token}, #{$value});
     }
 
-    .md3-navigation-drawer-modal {
-        bottom: 0;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: flex-end;
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        inline-size: 0;
+    @include elevation.theme(
+      (
+        'level': var(--_modal-container-elevation),
+      )
+    );
+  }
 
-        transition: inline-size $_transition-duration $_curve $_delay,
-            visibility $_delay $_curve $_transition-duration;
-    }
+  .md3-navigation-drawer-modal {
+    bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    inline-size: 0;
 
-    .md3-navigation-drawer-modal--opened {
-        transition: inline-size $_transition-duration $_curve $_delay,
-            visibility $_delay $_curve $_delay;
-    }
+    transition: inline-size $_transition-duration $_curve $_delay,
+      visibility $_delay $_curve $_transition-duration;
+  }
 
-    .md3-navigation-drawer-modal--pivot-at-start {
-        justify-content: flex-start;
-    }
+  .md3-navigation-drawer-modal--opened {
+    transition: inline-size $_transition-duration $_curve $_delay,
+      visibility $_delay $_curve $_delay;
+  }
 
-    .md3-navigation-drawer-modal__slot-content {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-    }
+  .md3-navigation-drawer-modal--pivot-at-start {
+    justify-content: flex-start;
+  }
 
-    .md3-navigation-drawer-modal__scrim {
-        inset: 0;
-        opacity: 0;
-        position: absolute;
-        visibility: hidden;
-        background-color: var(--_scrim-color);
+  .md3-navigation-drawer-modal__slot-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
 
-        transition: opacity $_transition-duration $_curve $_delay,
-            visibility $_delay $_curve $_transition-duration;
-    }
+  .md3-navigation-drawer-modal__scrim {
+    inset: 0;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    background-color: var(--_scrim-color);
 
-    .md3-navigation-drawer-modal--scrim-visible {
-        visibility: visible;
-        opacity: var(--_scrim-opacity);
+    transition: opacity $_transition-duration $_curve $_delay,
+      visibility $_delay $_curve $_transition-duration;
+  }
 
-        transition: opacity $_transition-duration $_curve $_delay,
-            visibility $_delay $_curve $_delay;
-    }
+  .md3-navigation-drawer-modal--scrim-visible {
+    visibility: visible;
+    opacity: var(--_scrim-opacity);
+
+    transition: opacity $_transition-duration $_curve $_delay, visibility $_delay $_curve $_delay;
+  }
 }
