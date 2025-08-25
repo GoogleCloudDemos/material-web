@@ -4,7 +4,82 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 // Generated stylesheet for ./labs/badge/internal/badge-styles.css.
-import { css } from 'lit';
-export const styles = css `:host{--_color: var(--md-badge-color, var(--md-sys-color-error, #b3261e));--_large-color: var(--md-badge-large-color, var(--md-sys-color-error, #b3261e));--_large-label-text-color: var(--md-badge-large-label-text-color, var(--md-sys-color-on-error, #fff));--_large-label-text-font: var(--md-badge-large-label-text-font, var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto)));--_large-label-text-line-height: var(--md-badge-large-label-text-line-height, var(--md-sys-typescale-label-small-line-height, calc(calc(1rem * var(--md-sys-globalscale,1)) * 16)));--_large-label-text-size: var(--md-badge-large-label-text-size, var(--md-sys-typescale-label-small-size, calc(calc(0.6875rem * var(--md-sys-globalscale,1)) * 16)));--_large-label-text-weight: var(--md-badge-large-label-text-weight, var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500)));--_large-shape: var(--md-badge-large-shape, var(--md-sys-shape-corner-full, calc(9999rem * var(--md-sys-globalscale,1))));--_large-size: var(--md-badge-large-size, calc(16rem * var(--md-sys-globalscale,1)));--_shape: var(--md-badge-shape, var(--md-sys-shape-corner-full, calc(9999rem * var(--md-sys-globalscale,1))));--_size: var(--md-badge-size, calc(6rem * var(--md-sys-globalscale,1)))}.md3-badge{inset-inline-start:50%;margin-inline-start:calc(6rem * var(--md-sys-globalscale,1));margin-block-start:calc(4rem * var(--md-sys-globalscale,1));position:absolute;inset-block-start:calc(0rem * var(--md-sys-globalscale,1));background-color:var(--_color);border-radius:var(--_shape);height:var(--_size)}.md3-badge:not(.md3-badge--large){width:var(--_size)}.md3-badge.md3-badge--large{display:flex;flex-direction:column;justify-content:center;margin-inline-start:calc(2rem * var(--md-sys-globalscale,1));margin-block-start:calc(1rem * var(--md-sys-globalscale,1));background-color:var(--_large-color);border-radius:var(--_large-shape);height:var(--_large-size);min-width:var(--_large-size);color:var(--_large-label-text-color)}.md3-badge.md3-badge--large .md3-badge__value{padding:calc(0rem * var(--md-sys-globalscale,1)) calc(4rem * var(--md-sys-globalscale,1));text-align:center}.md3-badge__value{font-family:var(--_large-label-text-font);font-size:var(--_large-label-text-size);line-height:var(--_large-label-text-line-height);font-weight:var(--_large-label-text-weight)}
-`;
+import { css } from 'lit'
+export const styles = css`
+  :host {
+    --_color: var(--md-badge-color, var(--md-sys-color-error, #b3261e));
+    --_large-color: var(--md-badge-large-color, var(--md-sys-color-error, #b3261e));
+    --_large-label-text-color: var(
+      --md-badge-large-label-text-color,
+      var(--md-sys-color-on-error, #fff)
+    );
+    --_large-label-text-font: var(
+      --md-badge-large-label-text-font,
+      var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto))
+    );
+    --_large-label-text-line-height: var(
+      --md-badge-large-label-text-line-height,
+      var(
+        --md-sys-typescale-label-small-line-height,
+        calc(calc(1 * var(--md-sys-globalscale, 1px)) * 16)
+      )
+    );
+    --_large-label-text-size: var(
+      --md-badge-large-label-text-size,
+      var(
+        --md-sys-typescale-label-small-size,
+        calc(calc(0.6875 * var(--md-sys-globalscale, 1px)) * 16)
+      )
+    );
+    --_large-label-text-weight: var(
+      --md-badge-large-label-text-weight,
+      var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500))
+    );
+    --_large-shape: var(
+      --md-badge-large-shape,
+      var(--md-sys-shape-corner-full, calc(9999 * var(--md-sys-globalscale, 1px)))
+    );
+    --_large-size: var(--md-badge-large-size, calc(16 * var(--md-sys-globalscale, 1px)));
+    --_shape: var(
+      --md-badge-shape,
+      var(--md-sys-shape-corner-full, calc(9999 * var(--md-sys-globalscale, 1px)))
+    );
+    --_size: var(--md-badge-size, calc(6 * var(--md-sys-globalscale, 1px)));
+  }
+  .md3-badge {
+    inset-inline-start: 50%;
+    margin-inline-start: calc(6 * var(--md-sys-globalscale, 1px));
+    margin-block-start: calc(4 * var(--md-sys-globalscale, 1px));
+    position: absolute;
+    inset-block-start: calc(0 * var(--md-sys-globalscale, 1px));
+    background-color: var(--_color);
+    border-radius: var(--_shape);
+    height: var(--_size);
+  }
+  .md3-badge:not(.md3-badge--large) {
+    width: var(--_size);
+  }
+  .md3-badge.md3-badge--large {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline-start: calc(2 * var(--md-sys-globalscale, 1px));
+    margin-block-start: calc(1 * var(--md-sys-globalscale, 1px));
+    background-color: var(--_large-color);
+    border-radius: var(--_large-shape);
+    height: var(--_large-size);
+    min-width: var(--_large-size);
+    color: var(--_large-label-text-color);
+  }
+  .md3-badge.md3-badge--large .md3-badge__value {
+    padding: calc(0 * var(--md-sys-globalscale, 1px)) calc(4 * var(--md-sys-globalscale, 1px));
+    text-align: center;
+  }
+  .md3-badge__value {
+    font-family: var(--_large-label-text-font);
+    font-size: var(--_large-label-text-size);
+    line-height: var(--_large-label-text-line-height);
+    font-weight: var(--_large-label-text-weight);
+  }
+`
 //# sourceMappingURL=badge-styles.js.map

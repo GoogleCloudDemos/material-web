@@ -88,8 +88,8 @@
     vertical-align: middle;
     background: transparent;
     text-decoration: none;
-    // Buttons have a default min-width of calc(64rem * var(--md-sys-globalscale,1)). This can be overridden by
-    // setting a smaller min-width on the host. The calc(64rem * var(--md-sys-globalscale,1)) button will be centered
+    // Buttons have a default min-width of calc(64* var(--md-sys-globalscale,1px)). This can be overridden by
+    // setting a smaller min-width on the host. The calc(64* var(--md-sys-globalscale,1px)) button will be centered
     // within the bounds of the smaller host element.
     min-width: calc(
       calc(64 * var(--md-sys-globalscale, 1px)) - var(--_leading-space) - var(--_trailing-space)

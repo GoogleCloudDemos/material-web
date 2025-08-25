@@ -177,7 +177,7 @@ $_default: (
     'error-supporting-text-color': map.get($text-field, 'error-supporting-text-color'),
     'error-trailing-content-color': map.get($text-field, 'error-trailing-icon-color'),
     'focus-active-indicator-color': map.get($text-field, 'focus-active-indicator-color'),
-    // TODO(b/259455114): remove when focus tokens update to calc(3rem * var(--md-sys-globalscale,1))
+    // TODO(b/259455114): remove when focus tokens update to calc(3* var(--md-sys-globalscale,1px))
     'focus-active-indicator-height':
       if($exclude-hardcoded-values, null, calc(3 * var(--md-sys-globalscale, 1px))),
     'focus-content-color': map.get($text-field, 'focus-input-text-color'),

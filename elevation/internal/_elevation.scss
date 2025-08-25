@@ -61,12 +61,12 @@
 
   // Key box shadow
   .shadow::before {
-    // level0: box-shadow: calc(0rem * var(--md-sys-globalscale,1)) calc(0rem * var(--md-sys-globalscale,1)) calc(0rem * var(--md-sys-globalscale,1)) calc(0rem * var(--md-sys-globalscale,1));
-    // level1: box-shadow: calc(0rem * var(--md-sys-globalscale,1)) calc(1rem * var(--md-sys-globalscale,1)) calc(2rem * var(--md-sys-globalscale,1)) calc(0rem * var(--md-sys-globalscale,1));
-    // level2: box-shadow: calc(0rem * var(--md-sys-globalscale,1)) calc(1rem * var(--md-sys-globalscale,1)) calc(2rem * var(--md-sys-globalscale,1)) calc(0rem * var(--md-sys-globalscale,1));
-    // level3: box-shadow: calc(0rem * var(--md-sys-globalscale,1)) calc(1rem * var(--md-sys-globalscale,1)) calc(3rem * var(--md-sys-globalscale,1)) calc(0rem * var(--md-sys-globalscale,1));
-    // level4: box-shadow: calc(0rem * var(--md-sys-globalscale,1)) calc(2rem * var(--md-sys-globalscale,1)) calc(3rem * var(--md-sys-globalscale,1)) calc(0rem * var(--md-sys-globalscale,1));
-    // level5: box-shadow: calc(0rem * var(--md-sys-globalscale,1)) calc(4rem * var(--md-sys-globalscale,1)) calc(4rem * var(--md-sys-globalscale,1)) calc(0rem * var(--md-sys-globalscale,1));
+    // level0: box-shadow: calc(0* var(--md-sys-globalscale,1px)) calc(0* var(--md-sys-globalscale,1px)) calc(0* var(--md-sys-globalscale,1px)) calc(0* var(--md-sys-globalscale,1px));
+    // level1: box-shadow: calc(0* var(--md-sys-globalscale,1px)) calc(1* var(--md-sys-globalscale,1px)) calc(2* var(--md-sys-globalscale,1px)) calc(0* var(--md-sys-globalscale,1px));
+    // level2: box-shadow: calc(0* var(--md-sys-globalscale,1px)) calc(1* var(--md-sys-globalscale,1px)) calc(2* var(--md-sys-globalscale,1px)) calc(0* var(--md-sys-globalscale,1px));
+    // level3: box-shadow: calc(0* var(--md-sys-globalscale,1px)) calc(1* var(--md-sys-globalscale,1px)) calc(3* var(--md-sys-globalscale,1px)) calc(0* var(--md-sys-globalscale,1px));
+    // level4: box-shadow: calc(0* var(--md-sys-globalscale,1px)) calc(2* var(--md-sys-globalscale,1px)) calc(3* var(--md-sys-globalscale,1px)) calc(0* var(--md-sys-globalscale,1px));
+    // level5: box-shadow: calc(0* var(--md-sys-globalscale,1px)) calc(4* var(--md-sys-globalscale,1px)) calc(4* var(--md-sys-globalscale,1px)) calc(0* var(--md-sys-globalscale,1px));
 
     // Add a clamped value for each level to build the correct values.
     // Sass will simplify nested calc()s.
@@ -110,12 +110,12 @@
 
   // Ambient box shadow
   .shadow::after {
-    // level0: box-shadow: calc(0rem * var(--md-sys-globalscale,1)) calc(0rem * var(--md-sys-globalscale,1)) calc(0rem * var(--md-sys-globalscale,1)) calc(0rem * var(--md-sys-globalscale,1));
-    // level1: box-shadow: calc(0rem * var(--md-sys-globalscale,1)) calc(1rem * var(--md-sys-globalscale,1)) calc(3rem * var(--md-sys-globalscale,1)) calc(1rem * var(--md-sys-globalscale,1));
-    // level2: box-shadow: calc(0rem * var(--md-sys-globalscale,1)) calc(2rem * var(--md-sys-globalscale,1)) calc(6rem * var(--md-sys-globalscale,1)) calc(2rem * var(--md-sys-globalscale,1));
-    // level3: box-shadow: calc(0rem * var(--md-sys-globalscale,1)) calc(4rem * var(--md-sys-globalscale,1)) calc(8rem * var(--md-sys-globalscale,1)) calc(3rem * var(--md-sys-globalscale,1));
-    // level4: box-shadow: calc(0rem * var(--md-sys-globalscale,1)) calc(6rem * var(--md-sys-globalscale,1)) calc(10rem * var(--md-sys-globalscale,1)) calc(4rem * var(--md-sys-globalscale,1));
-    // level5: box-shadow: calc(0rem * var(--md-sys-globalscale,1)) calc(8rem * var(--md-sys-globalscale,1)) calc(12rem * var(--md-sys-globalscale,1)) calc(6rem * var(--md-sys-globalscale,1));
+    // level0: box-shadow: calc(0* var(--md-sys-globalscale,1px)) calc(0* var(--md-sys-globalscale,1px)) calc(0* var(--md-sys-globalscale,1px)) calc(0* var(--md-sys-globalscale,1px));
+    // level1: box-shadow: calc(0* var(--md-sys-globalscale,1px)) calc(1* var(--md-sys-globalscale,1px)) calc(3* var(--md-sys-globalscale,1px)) calc(1* var(--md-sys-globalscale,1px));
+    // level2: box-shadow: calc(0* var(--md-sys-globalscale,1px)) calc(2* var(--md-sys-globalscale,1px)) calc(6* var(--md-sys-globalscale,1px)) calc(2* var(--md-sys-globalscale,1px));
+    // level3: box-shadow: calc(0* var(--md-sys-globalscale,1px)) calc(4* var(--md-sys-globalscale,1px)) calc(8* var(--md-sys-globalscale,1px)) calc(3* var(--md-sys-globalscale,1px));
+    // level4: box-shadow: calc(0* var(--md-sys-globalscale,1px)) calc(6* var(--md-sys-globalscale,1px)) calc(10* var(--md-sys-globalscale,1px)) calc(4* var(--md-sys-globalscale,1px));
+    // level5: box-shadow: calc(0* var(--md-sys-globalscale,1px)) calc(8* var(--md-sys-globalscale,1px)) calc(12* var(--md-sys-globalscale,1px)) calc(6* var(--md-sys-globalscale,1px));
 
     // Add a clamped value for each level to build the correct values.
     // Sass will simplify nested calc()s.

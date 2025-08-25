@@ -12,14 +12,14 @@
     border: calc(1 * var(--md-sys-globalscale, 1px)) solid ButtonText;
 
     &.extended {
-      // Adjust the padding-inline to account for the calc(1rem * var(--md-sys-globalscale,1)) border in HCM.
+      // Adjust the padding-inline to account for the calc(1* var(--md-sys-globalscale,1px)) border in HCM.
       padding-inline-start: calc(15 * var(--md-sys-globalscale, 1px));
       padding-inline-end: calc(19 * var(--md-sys-globalscale, 1px));
     }
   }
 
   md-focus-ring {
-    // Adjust the focus ring padding to account for the calc(1rem * var(--md-sys-globalscale,1)) border in HCM.
+    // Adjust the focus ring padding to account for the calc(1* var(--md-sys-globalscale,1px)) border in HCM.
     @include focus-ring.theme(
       (
         'outward-offset': calc(3 * var(--md-sys-globalscale, 1px)),

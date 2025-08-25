@@ -1,1 +1,13 @@
-{"version":3,"file":"forced-colors-styles.js","sourceRoot":"","sources":["forced-colors-styles.ts"],"names":[],"mappings":"AAAA;;;;GAIG;AACH,oEAAoE;AACpE,OAAO,EAAC,GAAG,EAAC,MAAM,KAAK,CAAC;AACxB,MAAM,CAAC,MAAM,MAAM,GAAG,GAAG,CAAA;CACxB,CAAC","sourcesContent":["/**\n * @license\n * Copyright 2024 Google LLC\n * SPDX-License-Identifier: Apache-2.0\n */\n// Generated stylesheet for ./fab/internal/forced-colors-styles.css.\nimport {css} from 'lit';\nexport const styles = css`@media(forced-colors: active){.fab{border:calc(1rem * var(--md-sys-globalscale,1)) solid ButtonText}.fab.extended{padding-inline-start:calc(15rem * var(--md-sys-globalscale,1));padding-inline-end:calc(19rem * var(--md-sys-globalscale,1))}md-focus-ring{--md-focus-ring-outward-offset: calc(3rem * var(--md-sys-globalscale,1))}}\n`;\n"]}
+{
+  "version": 3,
+  "file": "forced-colors-styles.js",
+  "sourceRoot": "",
+  "sources": [
+    "forced-colors-styles.ts"
+  ],
+  "names": [],
+  "mappings": "AAAA;;;;GAIG;AACH,oEAAoE;AACpE,OAAO,EAAC,GAAG,EAAC,MAAM,KAAK,CAAC;AACxB,MAAM,CAAC,MAAM,MAAM,GAAG,GAAG,CAAA;CACxB,CAAC",
+  "sourcesContent": [
+    "/**\n * @license\n * Copyright 2024 Google LLC\n * SPDX-License-Identifier: Apache-2.0\n */\n// Generated stylesheet for ./fab/internal/forced-colors-styles.css.\nimport {css} from 'lit';\nexport const styles = css`@media(forced-colors: active){.fab{border:calc(1* var(--md-sys-globalscale,1px)) solid ButtonText}.fab.extended{padding-inline-start:calc(15* var(--md-sys-globalscale,1px));padding-inline-end:calc(19* var(--md-sys-globalscale,1px))}md-focus-ring{--md-focus-ring-outward-offset: calc(3* var(--md-sys-globalscale,1px))}}\n`;\n"
+  ]
+}

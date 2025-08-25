@@ -1,1 +1,31 @@
-:host{font-size:var(--md-icon-size, calc(24rem * var(--md-sys-globalscale,1)));width:var(--md-icon-size, calc(24rem * var(--md-sys-globalscale,1)));height:var(--md-icon-size, calc(24rem * var(--md-sys-globalscale,1)));color:inherit;font-variation-settings:inherit;font-weight:400;font-family:var(--md-icon-font, Material Symbols Outlined);display:inline-flex;font-style:normal;place-items:center;place-content:center;line-height:1;overflow:hidden;letter-spacing:normal;text-transform:none;user-select:none;white-space:nowrap;word-wrap:normal;flex-shrink:0;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale}::slotted(svg){fill:currentColor}::slotted(*){height:100%;width:100%}/*# sourceMappingURL=icon-styles.css.map */
+:host {
+  font-size: var(--md-icon-size, calc(24 * var(--md-sys-globalscale, 1px)));
+  width: var(--md-icon-size, calc(24 * var(--md-sys-globalscale, 1px)));
+  height: var(--md-icon-size, calc(24 * var(--md-sys-globalscale, 1px)));
+  color: inherit;
+  font-variation-settings: inherit;
+  font-weight: 400;
+  font-family: var(--md-icon-font, Material Symbols Outlined);
+  display: inline-flex;
+  font-style: normal;
+  place-items: center;
+  place-content: center;
+  line-height: 1;
+  overflow: hidden;
+  letter-spacing: normal;
+  text-transform: none;
+  user-select: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  flex-shrink: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+::slotted(svg) {
+  fill: currentColor;
+}
+::slotted(*) {
+  height: 100%;
+  width: 100%;
+} /*# sourceMappingURL=icon-styles.css.map */

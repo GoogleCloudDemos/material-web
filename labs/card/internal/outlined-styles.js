@@ -4,7 +4,34 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 // Generated stylesheet for ./labs/card/internal/outlined-styles.css.
-import { css } from 'lit';
-export const styles = css `:host{--_container-color: var(--md-outlined-card-container-color, var(--md-sys-color-surface, #fef7ff));--_container-elevation: var(--md-outlined-card-container-elevation, 0);--_container-shadow-color: var(--md-outlined-card-container-shadow-color, var(--md-sys-color-shadow, #000));--_container-shape: var(--md-outlined-card-container-shape, var(--md-sys-shape-corner-medium, calc(12rem * var(--md-sys-globalscale,1))));--_outline-color: var(--md-outlined-card-outline-color, var(--md-sys-color-outline-variant, #cac4d0));--_outline-width: var(--md-outlined-card-outline-width, calc(1rem * var(--md-sys-globalscale,1)))}.outline{border-color:var(--_outline-color);border-width:var(--_outline-width)}
-`;
+import { css } from 'lit'
+export const styles = css`
+  :host {
+    --_container-color: var(
+      --md-outlined-card-container-color,
+      var(--md-sys-color-surface, #fef7ff)
+    );
+    --_container-elevation: var(--md-outlined-card-container-elevation, 0);
+    --_container-shadow-color: var(
+      --md-outlined-card-container-shadow-color,
+      var(--md-sys-color-shadow, #000)
+    );
+    --_container-shape: var(
+      --md-outlined-card-container-shape,
+      var(--md-sys-shape-corner-medium, calc(12 * var(--md-sys-globalscale, 1px)))
+    );
+    --_outline-color: var(
+      --md-outlined-card-outline-color,
+      var(--md-sys-color-outline-variant, #cac4d0)
+    );
+    --_outline-width: var(
+      --md-outlined-card-outline-width,
+      calc(1 * var(--md-sys-globalscale, 1px))
+    );
+  }
+  .outline {
+    border-color: var(--_outline-color);
+    border-width: var(--_outline-width);
+  }
+`
 //# sourceMappingURL=outlined-styles.js.map

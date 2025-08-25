@@ -159,7 +159,7 @@ $_default: (
   $tokens: map.merge(
     $tokens,
     (
-      // TODO(b/259455114): remove when focus tokens update to calc(3rem * var(--md-sys-globalscale,1))
+      // TODO(b/259455114): remove when focus tokens update to calc(3* var(--md-sys-globalscale,1px))
       'text-field-focus-outline-width':
         if($exclude-hardcoded-values, null, calc(3 * var(--md-sys-globalscale, 1px)))
     )
